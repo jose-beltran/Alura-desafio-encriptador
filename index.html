@@ -12,20 +12,28 @@
     <main class="container">
         <a class="logo">Logo</a>
         <section class="container_request">
-            <input class="container_request_input" type="text" placeholder="Ingrese el texto aqui">
+            <input id="input" class="container_request_input" type="text" placeholder="Ingrese el texto aqui">
             <p class="container_request_text">
                 ! Solo letras minúsculas y sin acentos !
             </p>
             <div class="container_buttons">
-                <button class="container_buttons_buttonEncript" type="submit">Encriptar</button>
+                <button class="container_buttons_buttonEncript" onclick="obtenerYEncriptarValor()">Encriptar</button>
                 <button class="container_buttons_buttonDesencript" type="submit">Desencriptar</button>
             </div>
         </section>
-        <section class="container_result">
-            <h3><strong>Ningún mensaje fue encontrado</strong></h3>
-            <p>Ingresa el texto que desees encriptar o desencriptar</p>
-        </section>
+        <div class="div_result">
+            <section class="container_result">
+                <p id="texto_encriptado"></p>
+                <h3><strong>Ningún mensaje fue encontrado</strong></h3>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                <button id="container_result_buttonCopiar" class="container_result_buttonCopiar" >Copiar</button>
+            </section>
+        </div>
     </main>
+    <footer class="footer">
+        <h3>Desarrollado por Jose Beltrán (2024)</h3>
+    </footer>
 </body>
 
+<script src="index.js" defer></script>
 </html>
