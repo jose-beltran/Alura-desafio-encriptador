@@ -1,48 +1,56 @@
-let textoSinEncriptar = "";
-let textoEncriptado = "";
-
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.getElementById(elemento);
     elementoHTML.innerText = texto;
 }
 
-function encriptarTexto(texto) {
-    let encriptado = texto.replace(/e/g, "enter")
+
+function obtenerYEncriptarValor() {
+
+    //Encriptar texto
+    let textoSinEncriptar = document.getElementById('input').value;
+    let encriptado = textoSinEncriptar.replace(/e/g, "enter")
         .replace(/i/g, "imes")
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
-
-    return encriptado
-    
-}
-
-function desencriptarTexto(texto) {
-    let desencriptado = texto.replace(/enter/g, "e")
-        .replace(/imes/g, "i")
-        .replace(/ai/g, "a")
-        .replace(/ober/g, "o")
-        .replace(/ufat/g, "u");
-
-    return desencriptado
-}
-
-function obtenerYEncriptarValor() {
-    textoSinEncriptar = document.getElementById('input').value;
-    let valorEncriptado = encriptarTexto(textoSinEncriptar);
-    console.log("texto encriptado: ", valorEncriptado);
-    textoEncriptado = valorEncriptado;
-    asignarTextoElemento("texto_encriptado", textoEncriptado);
+    asignarTextoElemento("texto_final", encriptado);
 
     //Mostrar Botón de copiar
     document.getElementById("container_result_buttonCopiar").style.display = "block";
-
-    //Esconder titulos
-    document.getElementById()
-    
+    ocultarElementos();
 }
 
-function obtenerYDesencriotarValor() {
-    textoEncriptado = document.getElementById('texto_encriptado').value;
+function obtenerYDesencriptarValor() {
+    let textoEncriptado = document.getElementById('input').value;
+    let textoDesencriptado = textoEncriptado
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
 
+    asignarTextoElemento('texto_final', textoDesencriptado)
+}
+
+function copiarTexto() {
+    //Copiar texto
+    let elementoTexto = document.getElementById('texto_final');
+    let texto = elementoTexto.innerText;
+
+    navigator.clipboard.writeText(texto);
+}
+
+function ocultarElementos() {
+    let image = document.getElementById("container_result_img");
+    let tittle = document.getElementById("container_result_tittle");
+    let texto = document.getElementById("container_result_p");
+    if (image.style.display == 'none' || tittle.style.display == 'none' || texto.style.display == 'none') {
+        image.style.display = 'block';
+        tittle.style.display = 'block';
+        texto.style.display = 'block';
+    } else {
+        image.style.display = 'none';
+        tittle.style.display = 'none';
+        texto.style.display = 'none';
+    }
 }
