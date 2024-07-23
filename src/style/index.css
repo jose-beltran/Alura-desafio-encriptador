@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --main-text: 'Inter' sans-serif;
     --primary-color: #184379;
 }
 
 * {
+    font-family: 'Inter' sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -92,7 +92,19 @@ input::placeholder {
     color: #495057;
 }
 
+.div_result {
+    display: flex;
+    height: 28.5rem;
+    background-color: #ffff;
+    border-radius: 30px;
+    box-shadow: 5px 5px 55px gray;
+}
+
 .container_result {
+    padding: 2% 5% 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 10% 7%;
     gap: 16px;
 }
@@ -113,4 +125,10 @@ input::placeholder {
     border-radius: 24px;
     padding: 20px 90px;
     border-color: #0A3871;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
 }
