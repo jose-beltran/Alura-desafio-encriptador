@@ -6,6 +6,8 @@ function asignarTextoElemento(elemento, texto) {
 
 function obtenerYEncriptarValor() {
 
+    
+
     //Encriptar texto
     let textoSinEncriptar = document.getElementById('input').value;
     let encriptado = textoSinEncriptar.replace(/e/g, "enter")
@@ -44,13 +46,15 @@ function ocultarElementos() {
     let image = document.getElementById("container_result_img");
     let tittle = document.getElementById("container_result_tittle");
     let texto = document.getElementById("container_result_p");
-    if (image.style.display == 'none' || tittle.style.display == 'none' || texto.style.display == 'none') {
-        image.style.display = 'block';
-        tittle.style.display = 'block';
-        texto.style.display = 'block';
+    let button = document.getElementById("container_result_buttonCopiar")
+
+    if (button.style.display === 'none' || button.style.display === '') {
+        image.style.display = 'block'
+        tittle.style.display = 'block'
+        texto.style.display = 'block'
     } else {
-        image.style.display = 'none';
-        tittle.style.display = 'none';
-        texto.style.display = 'none';
+        image.style.display = 'none'
+        tittle.style.display = 'none'
+        texto.style.display = 'none'
     }
 }

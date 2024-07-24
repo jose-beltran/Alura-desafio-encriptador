@@ -23,11 +23,15 @@
         </section>
         <div class="div_result">
             <section class="container_result">
-                <p id="texto_final" class="texto_final"></p>
-                <img src="./src/img/fondo.png" id="container_result_img" class="container_result_img">
+                <div class="container_texto_final">
+                    <p id="texto_final" class="texto_final"></p>
+                </div>
+                <img id="container_result_img" class="container_result_img" src="./src/img/fondo.png" >
                 <h3 id="container_result_tittle" class="container_result_tittle"><strong>Ningún mensaje fue encontrado</strong></h3>
                 <p id="container_result_p" class="container_result_p">Ingresa el texto que desees encriptar o desencriptar</p>
-                <button onclick="copiarTexto()" id="container_result_buttonCopiar" class="container_result_buttonCopiar" >Copiar</button>
+                <div class="container_buttonCopiar">
+                    <button id="container_result_buttonCopiar" class="container_result_buttonCopiar" onclick="copiarTexto()"  >Copiar</button>
+                </div>
             </section>
         </div>
     </main>
