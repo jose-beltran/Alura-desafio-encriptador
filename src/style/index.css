@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
+    --background-color: #f3f5fc;
     --primary-color: #184379;
+    --text-color: #495057;
 }
 
 * {
@@ -11,7 +13,7 @@
 }
 
 body {
-    background-color: #f3f5fc;
+    background-color: var(--background-color);
 }
 
 .container {
@@ -29,36 +31,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    width: 50%;
-    margin: 5% 0 0 0;
+    width: auto;
+    margin: 5% 10% 0 0;
 }
 
 .container_request_input {
     font-family: var(--main-text);
     font-size: 2rem;
     padding-bottom: 40%;
-    background-color: #f3f5fc;
+    background-color: var(--background-color);
     color: var(--primary-color);
     border: none;
     outline: none;
+    width: 80%;
 }
 
 input::placeholder {
-    color: #184379;
+    color: var(--primary-color);
 }
 
 .container_request_text {
     font-family: var(--main-text);
     font-size: 1rem;
-    color: #495057;
-    margin: 35% 0 0 7%;
+    color: var(--text-color);
+    margin: 25% 0 0 7%;
 }
 
 .container_buttons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 2%;
     gap: 80px;
 }
 
@@ -67,17 +70,17 @@ input::placeholder {
     background-color: #0a3871;
     color: #d1dae4;
     border-radius: 24px;
-    border-color: #234d80;
+    border-color: var(--primary-color);
     font-size: 1rem;
     padding: 20px 90px;
 }
 
 .container_buttons_buttonDesencript {
     font-family: var(--main-text);
-    background-color: #d8dfe8;
-    color: #234d80;
+    background-color: #D8DFE8;
+    color: var(--primary-color);
     border-radius: 24px;
-    border-color: #234d80;
+    border-color: #0A3871;
     font-size: 1rem;
     padding: 20px 90px;
 }
@@ -87,9 +90,9 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 2%;
-    width: 25rem;
+    width: 25%;
     height: 50rem;
     background-color: #ffff;
     border-radius: 30px;
@@ -101,6 +104,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: space-between;
     width: 80%;
+    height: auto;
     padding: 20px;
 }
 
@@ -118,7 +122,7 @@ input::placeholder {
 }
 
 .container_result_p {
-    color: #495057;
+    color: var(--text-color);
     font-family: var(--main-text);
     font-size: 1rem;
     margin: 10px 0;
@@ -132,7 +136,7 @@ input::placeholder {
 .texto_final {
     font-family: var(--main-text);
     font-size: 1.5rem;
-    color: #495057;
+    color: var(--text-color);
 }
 
 .container_buttonCopiar {
@@ -155,4 +159,39 @@ input::placeholder {
     display: flex;
     justify-content: center;
     padding-bottom: 2%;
+}
+
+@media (max-width: 1300px){
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0% 2% 6% 5%;
+    }
+
+    .logo {
+        margin: 2% 0 2% 0;
+    }
+
+    .container_request {
+        margin: 2% 0 0 0;
+    }
+
+    .div_result {
+        display: flex;
+        align-items: flex-start;
+        margin: 9% 0 0 3.5%;
+        width: 93.5%;
+        height: auto;
+    }
+
+    .container_result_img {
+        display: none;
+    }
+
+    .container_result_buttonCopiar {
+        margin: 2% 0 0 30%;
+    }
+
 }
