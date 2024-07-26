@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/index.css">
+    <title>Challenge</title>
+</head>
+
+<body>
+    <main class="container">
+        <img src="./src/img/alura.png" class="logo">
+        <section class="container_request">
+            <textarea id="input" class="container_request_input" type="text" placeholder="Ingrese el texto aqui"></textarea>
+            <p class="container_request_text">
+             <img src="./src/img/alerta.png"> Solo letras minúsculas y sin acentos
+            </p>
+            <div class="container_buttons">
+                <button onclick="obtenerYEncriptarValor()" class="container_buttons_buttonEncript">Encriptar</button>
+                <button onclick="obtenerYDesencriptarValor()" class="container_buttons_buttonDesencript">Desencriptar</button>
+            </div>
+        </section>
+        <div class="div_result">
+            <section id="container_result" class="container_result">
+                <div id="container_texto_final" class="container_texto_final">
+                    <p id="texto_final" class="texto_final"></p>
+                </div>
+                <img id="container_result_img" class="container_result_img" src="./src/img/fondo.png" >
+                <h3 id="container_result_tittle" class="container_result_tittle"><strong>Ningún mensaje fue encontrado</strong></h3>
+                <p id="container_result_p" class="container_result_p">Ingresa el texto que desees encriptar o desencriptar</p>
+                <div class="container_buttonCopiar">
+                    <button id="container_result_buttonCopiar" class="container_result_buttonCopiar" onclick="copiarTexto()"  >Copiar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <h3>Desarrollado por Jose Beltrán (2024)</h3>
+    </footer>
+</body>
+
+<script src="index.js" defer></script>
+</html>
